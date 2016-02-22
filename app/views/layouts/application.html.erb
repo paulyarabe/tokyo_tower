@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Splurty</title>
+  <title>Splurty - Get better, today!</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
@@ -41,9 +42,9 @@
         </div>
         <%= simple_form_for Quote.new do |f| %>
         <div class="modal-body">
-  			<%= f.input :saying, label: "How are you getting better today?", placeholder: "Excellence is the gradual result of always striving to do better." %>
+  			<%= f.input :saying, label: "Today, I got better by...", placeholder: "by taking extra shots in the gym when everyone had already gone home." %>
   			<br />
-  			<%= f.input :author, label: "Who is the author of the quote?", placeholder: "Pat Riley" %>
+  			<%= f.input :author, label: "Who is the author of the quote?", placeholder: "Kobe Bryant" %>
   		</div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
